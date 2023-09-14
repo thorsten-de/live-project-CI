@@ -16,5 +16,5 @@ steps:
 - task: UseDotNet@2
   inputs:
     version: '7.x'
-- script: dotnet build --configuration $(buildConfiguration)
+- script: dotnet build --configuration $(buildConfiguration) Estore.sln
   displayName: 'dotnet build $(buildConfiguration)'
