@@ -11,6 +11,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  solutionFile: 'EStore.sln'
 
 steps:
 - task: UseDotNet@2
@@ -20,5 +21,5 @@ steps:
   displayName: Build
   inputs:
     command: build
-    projects: '**/*.csproj'
+    projects: '$(solutionFile)'
     arguments: '--configuration $(buildConfiguration)'
